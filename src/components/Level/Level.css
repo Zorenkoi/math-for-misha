@@ -1,0 +1,26 @@
+.level {
+  padding: 5px 10px 10px;
+  display: grid;
+  row-gap: 5px;
+  border-radius: 10px;
+  transition-duration: 0.3s;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 5px rgb(187, 187, 187);
+}
+.level:hover {
+  scale: 1.1;
+}
+
+.completed {
+  /* background-color: gold; */
+}
+.available {
+}
+.unavailable {
+  background-color: rgb(204, 204, 204);
+  cursor: auto;
+}
+.unavailable:hover {
+  scale: 1;
+}

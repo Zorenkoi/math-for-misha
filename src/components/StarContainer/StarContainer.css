@@ -1,0 +1,11 @@
+.star-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  column-gap: 10px;
+}
+
+.star-container .star-icon:nth-child(2) {
+  height: 40px;
+  width: 40px;
+}

@@ -1,0 +1,31 @@
+.answer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.answer {
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid black;
+  transition-duration: 0.3s;
+}
+.answer:hover {
+  scale: 1.1;
+}
+.answer:disabled {
+  opacity: 1;
+  color: black;
+  cursor: auto;
+}
+
+.trueanswer {
+  background-color: rgb(32, 172, 32);
+}
+.youranswer {
+  background-color: rgb(220, 71, 71);
+}

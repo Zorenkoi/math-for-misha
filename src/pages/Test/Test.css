@@ -1,0 +1,21 @@
+.test {
+  position: relative;
+}
+.button-container {
+  padding: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 15px;
+}
+.button-container .left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 15px;
+}
+.info {
+  display: grid;
+  row-gap: 5px;
+  font-size: 16px;
+}

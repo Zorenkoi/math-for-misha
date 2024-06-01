@@ -36,7 +36,6 @@ const Hint: React.FC<IProps> = ({ onClick, isWaiting }) => {
 };
 
 const Frase = ({ countHint }: { countHint: number }) => {
-  const firstWord = countHint === 1 ? "Залишилась" : "Залишилося";
   const lastWord = getLastWord(countHint);
   return (
     <p className="hint-text">

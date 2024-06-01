@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import "./SwitchTheme.css";
 import MoonImg from "../../images/moon.svg";
 import SunImg from "../../images/sun.svg";

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import ClockBlackImg from "../../images/clock-black.svg";
 import ClockWhiteImg from "../../images/clock-white.svg";
 import { motion, useAnimate } from "framer-motion";

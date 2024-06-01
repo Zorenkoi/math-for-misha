@@ -1,5 +1,10 @@
 .question-text {
   text-align: center;
-  margin: 20px 0px;
   font-size: 40px;
+}
+
+@media (max-width: 400px) {
+  .question-text {
+    font-size: 35px;
+  }
 }

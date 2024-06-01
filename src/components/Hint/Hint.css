@@ -1,0 +1,19 @@
+.hint-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 20px;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  padding-bottom: 15px;
+}
+.hint-text {
+  white-space: nowrap;
+}
+
+@media (max-width: 400px) {
+  .hint-container {
+    justify-content: center;
+  }
+}

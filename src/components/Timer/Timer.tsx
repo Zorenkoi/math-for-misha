@@ -1,5 +1,9 @@
 import { useState, useEffect } from "react";
+import ClockBlackImg from "../../images/clock-black.svg";
+import ClockWhiteImg from "../../images/clock-white.svg";
+import { motion, useAnimate } from "framer-motion";
 import "./Timer.css";
+import { useAppSelector } from "../../hooks";
 
 interface IProps {
   secondsLeft: number;
@@ -14,28 +18,50 @@ const Timer: React.FC<IProps> = ({
   isActive,
   timeOutFunction,
 }) => {
+  const { theme } = useAppSelector((state) => state.themeReducer);
+  const [scope, animate] = useAnimate();
+
+  const amimateTimer = () => {
+    const rotateAnimation = {
+      rotate: [0, -15, 15, -15, 15, -15, 15, -15, 15, 0],
+    };
+    const scaleAnimation = {
+      scale: [1, 1.2, 1],
+    };
+    const transitionSettings = {
+      duration: 0.6,
+    };
+
+    animate(scope.current, rotateAnimation, transitionSettings);
+    animate(scope.current, scaleAnimation, transitionSettings);
+  };
+
   useEffect(() => {
-    let intervalId: ReturnType<typeof setInterval>;
+    const intervalId = setInterval(() => {
+      if (!isActive) return;
 
-    if (isActive) {
-      intervalId = setInterval(() => {
-        setSecondsLeft((seconds) => {
-          const newValue = seconds - 1;
+      setSecondsLeft((secondsLeft) => {
+        const newSecondsLeft = secondsLeft - 1;
 
-          if (newValue === 0) {
-            timeOutFunction();
-            clearInterval(intervalId);
-          }
+        if (newSecondsLeft <= 0) {
+          amimateTimer();
+          timeOutFunction();
+          clearInterval(intervalId);
+        }
 
-          return newValue;
-        });
-      }, 1000);
-    }
+        return newSecondsLeft;
+      });
+    }, 1000);
 
     return () => clearInterval(intervalId);
   }, [isActive]);
 
-  return <div className="timer">{secondsLeft}</div>;
+  return (
+    <motion.div ref={scope} className="timer">
+      <img src={theme === "dark" ? ClockWhiteImg : ClockBlackImg} alt="" />
+      <p>{secondsLeft}</p>
+    </motion.div>
+  );
 };
 
 export default Timer;

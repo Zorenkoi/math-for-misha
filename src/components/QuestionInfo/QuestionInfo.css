@@ -1,0 +1,5 @@
+.info {
+  display: grid;
+  row-gap: 5px;
+  font-size: 16px;
+}

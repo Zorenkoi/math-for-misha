@@ -5,7 +5,8 @@
   column-gap: 10px;
 }
 
-.star-container .star-icon:nth-child(2) {
-  height: 40px;
-  width: 40px;
+@media (max-width: 320px) {
+  .star-container {
+    column-gap: 0px;
+  }
 }

@@ -1,6 +1,7 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import levelsReducer from "./slices/levelsSlice";
 import hintsReducer from "./slices/hintsSlice";
+import themeReducer from "./slices/themeSlice";
 
 import storage from "redux-persist/lib/storage";
 import {
@@ -22,6 +23,7 @@ const persistConfig = {
 const rootReducer = combineReducers({
   levelsReducer,
   hintsReducer,
+  themeReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

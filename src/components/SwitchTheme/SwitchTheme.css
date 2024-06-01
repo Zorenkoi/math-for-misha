@@ -1,0 +1,9 @@
+.theme-container {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+.theme-container img {
+  width: 30px;
+  height: 30px;
+}

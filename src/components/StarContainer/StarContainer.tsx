@@ -6,6 +6,16 @@ interface IProps {
 }
 
 const StarContainer: React.FC<IProps> = ({ countMistakes }) => {
+  if (!countMistakes && countMistakes !== 0) {
+    return (
+      <div className="star-container">
+        <Star type="empty" />
+        <Star type="empty" />
+        <Star type="empty" />
+      </div>
+    );
+  }
+
   return (
     <div className="star-container">
       {countMistakes <= 6 ? <Star type="filled" /> : <Star type="empty" />}

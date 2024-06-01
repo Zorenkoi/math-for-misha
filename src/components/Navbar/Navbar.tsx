@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import SwitchTheme from "../SwitchTheme/SwitchTheme";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 
@@ -10,6 +10,8 @@ const Navbar: React.FC = () => {
           <Link className="navbar-link" to="/">
             Рівні
           </Link>
+
+          <SwitchTheme />
         </div>
       </div>
     </div>

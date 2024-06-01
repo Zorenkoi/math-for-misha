@@ -1,31 +1,20 @@
-.answer-container {
+.answers-button-container {
+  padding-top: 40px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 15px;
 }
-.answer {
-  padding: 20px;
-  font-size: 20px;
-  font-weight: 500;
+.answers-button-container .bottom {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  border-radius: 10px;
-  border: 1px solid black;
-  transition-duration: 0.3s;
-}
-.answer:hover {
-  scale: 1.1;
-}
-.answer:disabled {
-  opacity: 1;
-  color: black;
-  cursor: auto;
+  column-gap: 15px;
+  row-gap: 15px;
+  flex-wrap: wrap;
 }
 
-.trueanswer {
-  background-color: rgb(32, 172, 32);
-}
-.youranswer {
-  background-color: rgb(220, 71, 71);
+@media (max-width: 400px) {
+  .answers-button-container {
+    padding-top: 30px;
+  }
 }

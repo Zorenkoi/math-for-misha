@@ -20,9 +20,15 @@ const Level: React.FC<IProps> = ({
     <div onClick={clickLevel} className={className}>
       <StarContainer countMistakes={countMistakes} />
 
-      <div>
-        {actionType === "*" ? "множення" : "ділення"} на {number}
-      </div>
+      {number === 9 ? (
+        <b>BOSS</b>
+      ) : (
+        <div>
+          {actionType === "*" ? "множення" : "ділення"} на
+          <br />
+          <b>{number}</b>
+        </div>
+      )}
     </div>
   );
 };
